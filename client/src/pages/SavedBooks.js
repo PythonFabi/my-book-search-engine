@@ -52,7 +52,7 @@ const SavedBooks = () => {
     return <h2>An error occurred: {error.message}</h2>;
   }
 
-  // create function that accepts the book's mongo _id value as param and deletes the book from the database
+
 
   // if data isn't here yet, say so
   if (!userDataLength) {
