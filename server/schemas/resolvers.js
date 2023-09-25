@@ -62,7 +62,7 @@ const resolvers = {
       }
     },
     // remove a book from savedBooks
-    deleteBook: async (parent, { bookId, userId }) => {
+    removeBook: async (parent, { bookId, userId }) => {
       try {
         return User.findOneandUpdate(
           // look for user id and pull book from the savedBooks
