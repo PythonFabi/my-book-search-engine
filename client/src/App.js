@@ -26,6 +26,7 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+// create new Apollo instance to use graphql in client using the httpLink
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
