@@ -5,7 +5,7 @@ const path = require('path');
 // use authMiddleware to connect to graphql
 const { authMiddleware } = require('./utils/auth');
 // get typeDefs and resolvers from the schemas dir
-const { typeDefs, resolvers } = require('.schemas');
+const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
 
@@ -15,7 +15,7 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: authMiddleware,
+  context: authMiddleware
 })
 
 
